@@ -48,7 +48,8 @@ Is case-insensitive for better user experience
 The highlighting will be visible across all columns, making it easy for users to spot matching text anywhere in the table. The light yellow background helps draw attention to matches while maintaining readability.
 
 If you want to apply the highlighting only to column 1 (First Name column) in the table, here's how to modify the code:
-javaCopyprivate void jTextField9KeyReleased(java.awt.event.KeyEvent evt) {                                        
+```java
+private void jTextField9KeyReleased(java.awt.event.KeyEvent evt) {                                        
     String searchText = jTextField9.getText();
     
     // Apply the custom renderer only to column 1 (First Name)
@@ -69,6 +70,9 @@ javaCopyprivate void jTextField9KeyReleased(java.awt.event.KeyEvent evt) {
     } else {
         sorter.setRowFilter(RowFilter.regexFilter("(?i)" + searchText, 1)); // The second parameter '1' specifies to only search column 1
     }
+}
+```
+    
 }
 The key changes are:
 
